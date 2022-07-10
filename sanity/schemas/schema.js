@@ -20,8 +20,8 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     restaurant,
-    dish,
     category,
+    dish,
     featured,
   ]),
 })
