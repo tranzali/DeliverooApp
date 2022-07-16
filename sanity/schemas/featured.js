@@ -2,7 +2,7 @@ import restaurant from "./restaurant";
 
 export default {
     name: 'featured',
-    title: 'Featured Menu categories',
+    title: 'Featured Menu Categories',
     type: 'document',
     fields: [
       {
