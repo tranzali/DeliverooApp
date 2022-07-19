@@ -45,7 +45,7 @@ const DishRow = ({ id, name, description, price, image }) => {
                     <Image
                         style={{
                             borderWidth: 1,
-                            borderColor: "#f3f3f4"
+                            borderColor: "#f3f3f4",
                         }}
                         source={{ uri: urlFor(image).url() }}
                         className="h-20 w-20 bg-gray-300 p-4"
