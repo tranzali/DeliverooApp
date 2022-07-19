@@ -12,7 +12,6 @@ const BasketScreen = () => {
   const restaurant = useSelector(selectRestaurant)
   const items = useSelector(selectBasketItems)
   const dispatch = useDispatch()
-  const results = 
 
   useEffect(() => {
     const groupedItems = items.reduce((results, item) => {
