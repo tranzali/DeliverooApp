@@ -13,6 +13,7 @@ const BasketScreen = () => {
   const items = useSelector(selectBasketItems)
   const dispatch = useDispatch()
 
+  
   useEffect(() => {
     const groupedItems = items.reduce((results, item) => {
         (results[item.id] = results[item.id] || []).push(item)
