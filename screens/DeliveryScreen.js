@@ -40,6 +40,10 @@ const DeliveryScreen = () => {
             </Text>
         </View>
       </SafeAreaView>
+      
+      <SafeAreaView className="flex-1">
+        <Text className="flex-1 flex items-center justify-center text-white text-lg">MAP HERE</Text>
+      </SafeAreaView>
 
       {/* <MapView
         initialRegion={{
