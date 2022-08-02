@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, Image, Dimensions } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux/es/exports'
@@ -41,7 +41,7 @@ const DeliveryScreen = () => {
         </View>
       </SafeAreaView>
 
-      <MapView
+      {/* <MapView
         initialRegion={{
           latitude: restaurant.lat,
           longitude: restaurant.long,
@@ -61,7 +61,7 @@ const DeliveryScreen = () => {
           identifier='origin'
           pinColor='#00CCBB'
         />
-      </MapView>
+      </MapView> */}
 
       <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
         <Image
