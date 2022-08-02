@@ -17,7 +17,7 @@ const Categories = () => {
       })
   }, [])
 
-  // console.log(categories)
+   console.log(categories)
 
   return (
     <ScrollView 
@@ -33,6 +33,7 @@ const Categories = () => {
           <CategoryCard
             key={category._id}
             imgUrl={urlFor(category.image).width(200).url()}
+            title={category.name}
           />
         ))}
         
