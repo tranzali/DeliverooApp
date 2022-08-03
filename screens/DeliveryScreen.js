@@ -8,20 +8,15 @@ import * as Progress from "react-native-progress"
 // import MapView, { Marker } from "react-native-maps"
 
 const DeliveryScreen = () => {
-    const navigation = useNavigation()
-    const restaurant = useSelector(selectRestaurant)
-
-    useEffect(() => {
-        setTimeout(() => {
-            navigation.navigate("Home")
-        }, 5000)
-    }, [])
+  const navigation = useNavigation()
+  const restaurant = useSelector(selectRestaurant)
 
   return (
     <View className="bg-[#00CCBB] flex-1">
       <SafeAreaView className="z-50">
         <View className="flex-row justify-between items-center p-3">
-            <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+            <TouchableOpacity onPress={() => 
+              navigation.navigate("Home")}>
                 <XIcon color="white" size={30} />
             </TouchableOpacity>
             <Text className="font-light text-white text-lg">Order Help</Text>

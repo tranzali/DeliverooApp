@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectRestaurant } from '../features/restaurantSlice'
-import { selectBasketItems, removeFromBasket, selectBasketTotal } from '../features/basketSlice'
+import { clearBasket, selectBasketItems, removeFromBasket, selectBasketTotal } from '../features/basketSlice'
 import { XCircleIcon } from 'react-native-heroicons/solid'
 import { urlFor } from '../sanity'
 import Currency from "react-currency-formatter"
@@ -16,7 +16,7 @@ const BasketScreen = () => {
   const basketTotal = useSelector(selectBasketTotal)
   const dispatch = useDispatch()
 
-  if(items.length == 0){navigation.navigate("Home")}
+  // if(items.length == 0){navigation.navigate("Home")}
 
   useEffect(() => {
     const groupedItems = items.reduce((results, item) => {
@@ -113,7 +113,8 @@ const BasketScreen = () => {
             </Text>
           </View>
         
-          <TouchableOpacity 
+          <TouchableOpacity
+            disabled={!items.length}
             onPress={() => navigation.navigate("PreparingOrderScreen")} 
             className="rounded-lg bg-[#00CCBB] p-4"
           >

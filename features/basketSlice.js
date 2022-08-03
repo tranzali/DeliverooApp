@@ -11,6 +11,7 @@ name: 'basket',
     addToBasket: (state, action) => {
       state.items = [...state.items, action.payload]
     },
+
     removeFromBasket: (state, action) => {
       const index = state.items.findIndex((item) => item.id === action.payload.id)
 
@@ -23,15 +24,18 @@ name: 'basket',
             `Product (id: ${action.payload.id}) not in basket`
         )
       }
-
-
       state.items = newBasket
     },
+
+    clearBasket: (state) => {
+      let newBasket = [...state.items, []]
+      state.items = newBasket
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addToBasket, removeFromBasket } = basketSlice.actions
+export const { addToBasket, removeFromBasket, clearBasket } = basketSlice.actions
 
 export const selectBasketItems = (state) => state.basket.items
 
