@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux/es/exports'
 import { selectRestaurant } from "../features/restaurantSlice"
@@ -10,6 +10,12 @@ import * as Progress from "react-native-progress"
 const DeliveryScreen = () => {
     const navigation = useNavigation()
     const restaurant = useSelector(selectRestaurant)
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("Home")
+        }, 5000)
+    }, [])
 
   return (
     <View className="bg-[#00CCBB] flex-1">

@@ -16,7 +16,8 @@ const BasketScreen = () => {
   const basketTotal = useSelector(selectBasketTotal)
   const dispatch = useDispatch()
 
-  
+  if(items.length == 0){navigation.navigate("Home")}
+
   useEffect(() => {
     const groupedItems = items.reduce((results, item) => {
         (results[item.id] = results[item.id] || []).push(item)
@@ -119,9 +120,9 @@ const BasketScreen = () => {
             <Text className="text-center text-white text-lg font-bold">
               Place Order
             </Text>
-          </TouchableOpacity>
-        
-        </View>
+          </TouchableOpacity>     
+
+       </View>
       </View>
     </SafeAreaView>
   )
