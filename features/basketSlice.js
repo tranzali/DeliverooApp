@@ -28,7 +28,7 @@ name: 'basket',
     },
 
     clearBasket: (state) => {
-      let newBasket = [...state.items, []]
+      let newBasket = []
       state.items = newBasket
     }
   },

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectRestaurant } from '../features/restaurantSlice'
-import { clearBasket, selectBasketItems, removeFromBasket, selectBasketTotal } from '../features/basketSlice'
+import { selectBasketItems, removeFromBasket, selectBasketTotal } from '../features/basketSlice'
 import { XCircleIcon } from 'react-native-heroicons/solid'
 import { urlFor } from '../sanity'
 import Currency from "react-currency-formatter"
@@ -121,7 +121,7 @@ const BasketScreen = () => {
             <Text className="text-center text-white text-lg font-bold">
               Place Order
             </Text>
-          </TouchableOpacity>     
+          </TouchableOpacity>
 
        </View>
       </View>

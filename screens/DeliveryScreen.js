@@ -1,22 +1,28 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, Dimensions } from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { useSelector } from 'react-redux/es/exports'
+import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { selectRestaurant } from "../features/restaurantSlice"
 import { XIcon } from "react-native-heroicons/solid"
 import * as Progress from "react-native-progress"
 // import MapView, { Marker } from "react-native-maps"
+import { clearBasket, selectBasketItems } from '../features/basketSlice'
 
 const DeliveryScreen = () => {
   const navigation = useNavigation()
   const restaurant = useSelector(selectRestaurant)
+  const items = useSelector(selectBasketItems)
+  const dispatch = useDispatch()
 
   return (
     <View className="bg-[#00CCBB] flex-1">
       <SafeAreaView className="z-50">
         <View className="flex-row justify-between items-center p-3">
-            <TouchableOpacity onPress={() => 
-              navigation.navigate("Home")}>
+            <TouchableOpacity onPress={() => {
+              dispatch(clearBasket(items))
+              navigation.navigate("Home")
+              
+            }}>
                 <XIcon color="white" size={30} />
             </TouchableOpacity>
             <Text className="font-light text-white text-lg">Order Help</Text>
