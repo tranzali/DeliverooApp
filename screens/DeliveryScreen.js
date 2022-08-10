@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, Dimensions } from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { useDispatch, useSelector } from 'react-redux/es/exports'
+import { useDispatch, useSelector } from 'react-redux'
 import { selectRestaurant } from "../features/restaurantSlice"
 import { XIcon } from "react-native-heroicons/solid"
 import * as Progress from "react-native-progress"
@@ -28,7 +28,7 @@ const DeliveryScreen = () => {
             <Text className="font-light text-white text-lg">Order Help</Text>
         </View>
 
-        <View className="bg-white mx-5 my-2 rounded-md p-6 z-50 shadow-md">
+        <View className="bg-white mx-3 my-2 rounded-md p-6 z-50 shadow-md">
             <View className="flex-row justify-between">
                 <View>
                     <Text className="text-lg text-gray-400">Estimated Arrival Time</Text>
@@ -48,9 +48,9 @@ const DeliveryScreen = () => {
         </View>
       </SafeAreaView>
       
-      <SafeAreaView className="flex-1">
-        <Text className="flex-1 flex items-center justify-center text-white text-lg">MAP HERE</Text>
-      </SafeAreaView>
+      <View className="flex-1">
+        <Text style={{ textAlign: 'center', textAlignVertical: 'center' }} className="flex flex-1 items-center justify-between text-white text-lg">MAP HERE</Text>
+      </View>
 
       {/* <MapView
         initialRegion={{

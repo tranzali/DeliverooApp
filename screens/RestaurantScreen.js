@@ -1,7 +1,7 @@
 import { View, Image, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useLayoutEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { ScrollView } from 'react-native-web'
+import { ScrollView } from 'react-native'
 import { urlFor } from '../sanity'
 import { 
   ArrowLeftIcon,
