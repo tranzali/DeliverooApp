@@ -30,7 +30,7 @@ const BasketScreen = () => {
 //   console.log(groupedItemsInBasket)  
   
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView style={{ maxWidth: 840, width: '100%', marginHorizontal: 'auto'}} className="flex-1 bg-white">
       <View className="flex-1 bg-gray-100">
         <View className="p-5 border-b border-[#00CCBB] bg-white shadow-x">
             <View>

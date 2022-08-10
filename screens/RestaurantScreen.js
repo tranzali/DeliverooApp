@@ -59,7 +59,7 @@ const RestaurantScreen = () => {
     <>
       <BasketIcon />
       
-      <ScrollView>
+      <ScrollView style={{ maxWidth: 840, width: '100%', marginHorizontal: 'auto'}}>
         <View className="relative">
           <Image 
             source={{

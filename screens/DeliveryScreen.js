@@ -15,7 +15,7 @@ const DeliveryScreen = () => {
   const dispatch = useDispatch()
 
   return (
-    <View className="bg-[#00CCBB] flex-1">
+    <View  style={{ maxWidth: 840, width: '100%', marginHorizontal: 'auto'}} className="bg-[#00CCBB] flex-1">
       <SafeAreaView className="z-50">
         <View className="flex-row justify-between items-center p-3">
             <TouchableOpacity onPress={() => {
