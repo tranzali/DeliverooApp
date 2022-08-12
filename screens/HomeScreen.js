@@ -1,5 +1,6 @@
-import { View, Text, SafeAreaView, Image, ScrollView, TextInput } from 'react-native'
+import { View, Text, Image, ScrollView, TextInput } from 'react-native'
 import React, { useEffect, useLayoutEffect, useState } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native'
 import { 
   UserIcon,

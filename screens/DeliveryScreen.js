@@ -1,4 +1,5 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Image, Dimensions } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
