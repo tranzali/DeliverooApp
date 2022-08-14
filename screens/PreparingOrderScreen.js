@@ -19,13 +19,13 @@ const PreparingOrderScreen = () => {
             source={require("../assets/orderLoading.gif")}
             animation="slideInUp"
             iterationCount={1}
-            className="h-96 w-96"
+            className="h-96 w-96 px-4"
         />
     
         <Animatable.Text
             animation="slideInUp"
             iterationCount={1}
-            className="text-lg my-10 px-1 text-white font-bold text-center"
+            className="text-lg my-6 px-2 text-white font-bold text-center"
         >
             Waiting for Restaurant to accept your order
         </Animatable.Text>
